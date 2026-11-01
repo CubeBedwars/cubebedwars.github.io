@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CubeBedwars — 3D Voxel Sky Wars | Play Web, Desktop & Mobile</title>
+  <meta name="description" content="Official portal for CubeBedwars: Play 3D Voxel Bedwars instantly in your browser, or download native Desktop (Windows/macOS/Linux) and Mobile (Android/iOS) apps. Featuring Tactical AI, WebRTC Multiplayer, and 14+ Modes.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" href="assets/logo.png">
+</head>
+<body>
+  <!-- Background Glow & Stars -->
+  <div class="bg-stars"></div>
+  <div class="glow-orb orb-1"></div>
+  <div class="glow-orb orb-2"></div>
+
+  <!-- Header / Navigation -->
+  <header class="navbar">
+    <div class="nav-container">
+      <a href="#" class="brand">
+        <img src="assets/logo.png" alt="CubeBedwars Logo" class="brand-logo">
+        <span class="brand-name">CUBE<span class="gradient-text">BEDWARS</span></span>
+      </a>
+      <nav class="nav-links">
+        <a href="#play" class="nav-link">Play Web</a>
+        <a href="#download" class="nav-link">Downloads</a>
+        <a href="#modes" class="nav-link">Game Modes</a>
+        <a href="#studio" class="nav-link">3D Studio</a>
+        <a href="https://github.com/CubeBedwars" target="_blank" class="nav-btn-gh">
+          <svg class="gh-icon" viewBox="0 0 16 16" width="16" height="16" fill="currentColor">
+            <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path>
+          </svg>
+          GitHub Org
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="hero-badge">
+      <span class="badge-dot"></span>
+      MULTI-PLATFORM VOXEL BEDWARS ECOSYSTEM
+    </div>
+    <h1 class="hero-title">
+      VOXEL SKY WARS.<br>
+      <span class="gradient-text">PLAY ANYWHERE.</span>
+    </h1>
+    <p class="hero-subtitle">
+      Battle intelligent autonomous AI bots, host serverless WebRTC multiplayer with zero backend lag, and sculpt custom sky islands in the in-game 3D Voxel Studio.
+    </p>
+    <div class="hero-cta-group">
+      <a href="#play" class="btn btn-primary btn-hero">
+        <span class="btn-icon">▶</span> Play Instantly in Browser
+      </a>
+      <a href="#download" class="btn btn-secondary btn-hero">
+        <span class="btn-icon">📥</span> Download Desktop & Mobile
+      </a>
+    </div>
+
+    <!-- Quick Stats Strip -->
+    <div class="stats-strip glass-card">
+      <div class="stat-item">
+        <span class="stat-number">14+</span>
+        <span class="stat-label">Game Modes</span>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat-item">
+        <span class="stat-number">0ms</span>
+        <span class="stat-label">P2P Host Lag</span>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat-item">
+        <span class="stat-number">60+</span>
+        <span class="stat-label">Voxel FPS</span>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat-item">
+        <span class="stat-number">3</span>
+        <span class="stat-label">Platforms (Web/Desktop/Mobile)</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 1: Instant In-Browser Web Player -->
+  <section id="play" class="section-container">
+    <div class="section-header">
+      <div class="section-tag">WEB CLIENT</div>
+      <h2 class="section-title">Instant Play (In-Browser)</h2>
+      <p class="section-desc">Jump straight into the match right now with zero downloads or account registration required.</p>
+    </div>
+
+    <div class="game-frame-wrapper glass-card">
+      <div class="game-frame-topbar">
+        <div class="window-controls">
+          <span class="dot dot-red"></span>
+          <span class="dot dot-yellow"></span>
+          <span class="dot dot-green"></span>
+        </div>
+        <span class="game-frame-title">CubeBedwars Web Client (Voxel 3D Engine)</span>
+        <button id="btn-fullscreen-toggle" class="btn-fullscreen" title="Toggle Fullscreen">⛶ Fullscreen</button>
+      </div>
+      <div class="iframe-container">
+        <iframe id="game-iframe" src="game/index.html" allow="pointer-lock; autoplay" title="CubeBedwars Web Game"></iframe>
+      </div>
+      <div class="game-frame-footer">
+        <span>Controls: <b>WASD</b> Move • <b>Space</b> Jump • <b>Left Click</b> Attack/Break • <b>Right Click</b> Place • <b>B / E</b> Shop • <b>T</b> Chat</span>
+        <a href="https://github.com/CubeBedwars/web" target="_blank" class="link-repo">web repo ↗</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 2: Installable Apps (Desktop & Mobile) -->
+  <section id="download" class="section-container">
+    <div class="section-header">
+      <div class="section-tag">NATIVE DISTRIBUTION</div>
+      <h2 class="section-title">Install Native Desktop & Mobile Apps</h2>
+      <p class="section-desc">Experience maximum hardware acceleration, offline AI play, and dedicated low-latency input.</p>
+    </div>
+
+    <div class="downloads-grid">
+      <!-- Card 1: Desktop App -->
+      <div class="download-card glass-card glow-blue">
+        <div class="download-card-header">
+          <div class="platform-icon">💻</div>
+          <div>
+            <h3>Desktop Edition</h3>
+            <span class="platform-tag">Windows • macOS • Linux</span>
+          </div>
+        </div>
+        <p class="download-card-desc">
+          Native borderless 60fps Electron client with direct GPU acceleration, F11 fullscreen toggle, and offline solo play against AI bots.
+        </p>
+        <div class="download-buttons-col">
+          <a href="https://github.com/CubeBedwars/desktop/releases" target="_blank" class="btn btn-primary btn-block">
+            <span>🪟 Download for Windows (.exe)</span>
+          </a>
+          <div class="sub-download-row">
+            <a href="https://github.com/CubeBedwars/desktop/releases" target="_blank" class="btn btn-secondary btn-sm">🍎 macOS (.dmg)</a>
+            <a href="https://github.com/CubeBedwars/desktop/releases" target="_blank" class="btn btn-secondary btn-sm">🐧 Linux (.AppImage)</a>
+          </div>
+        </div>
+        <div class="card-footer-repo">
+          <a href="https://github.com/CubeBedwars/desktop" target="_blank">View GitHub Repository ↗</a>
+        </div>
+      </div>
+
+      <!-- Card 2: Mobile App -->
+      <div class="download-card glass-card glow-green">
+        <div class="download-card-header">
+          <div class="platform-icon">📱</div>
+          <div>
+            <h3>Mobile Edition</h3>
+            <span class="platform-tag">Android • iOS • PWA</span>
+          </div>
+        </div>
+        <p class="download-card-desc">
+          Capacitor native shell engineered with responsive touch controls, virtual analog joystick, action buttons, and haptic feedback.
+        </p>
+        <div class="download-buttons-col">
+          <a href="https://github.com/CubeBedwars/mobile/releases" target="_blank" class="btn btn-primary btn-block">
+            <span>🤖 Download Android (.apk)</span>
+          </a>
+          <button id="btn-pwa-install" class="btn btn-secondary btn-block">
+            <span>📲 Install as Web App (PWA)</span>
+          </button>
+        </div>
+        <div class="card-footer-repo">
+          <a href="https://github.com/CubeBedwars/mobile" target="_blank">View GitHub Repository ↗</a>
+        </div>
+      </div>
+
+      <!-- Card 3: Web App Repository -->
+      <div class="download-card glass-card glow-purple">
+        <div class="download-card-header">
+          <div class="platform-icon">🌐</div>
+          <div>
+            <h3>Web Client & Netlify</h3>
+            <span class="platform-tag">Vite • Three.js • P2P</span>
+          </div>
+        </div>
+        <p class="download-card-desc">
+          Zero-server WebRTC P2P client ready for 1-click deployment on Netlify and GitHub Pages. Export directly from GitHub.
+        </p>
+        <div class="download-buttons-col">
+          <a href="https://github.com/CubeBedwars/web" target="_blank" class="btn btn-secondary btn-block">
+            <span>📂 Clone Web Repository</span>
+          </a>
+          <a href="https://app.netlify.com/start/deploy?repository=https://github.com/CubeBedwars/web" target="_blank" class="btn btn-primary btn-block">
+            <span>🚀 1-Click Deploy to Netlify</span>
+          </a>
+        </div>
+        <div class="card-footer-repo">
+          <a href="https://github.com/CubeBedwars/web" target="_blank">View GitHub Repository ↗</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 3: Game Modes Showcase -->
+  <section id="modes" class="section-container">
+    <div class="section-header">
+      <div class="section-tag">DIVERSE GAMEPLAY</div>
+      <h2 class="section-title">14+ High-Energy Game Modes</h2>
+      <p class="section-desc">From lightning-fast rush bridging to unpredictable chaos and lunar gravity dogfights.</p>
+    </div>
+
+    <div class="modes-grid">
+      <div class="mode-card glass-card">
+        <div class="mode-icon">⚡</div>
+        <h4>Rush Bedwars</h4>
+        <p>2x movement speed, instant click-to-bridge placement, and 3x forge resource spawners for non-stop adrenaline.</p>
+      </div>
+      <div class="mode-card glass-card">
+        <div class="mode-icon">🍀</div>
+        <h4>Lucky Block Bedwars</h4>
+        <p>Mine rainbow lucky blocks to spawn bridge eggs, TNT surprises, super knockback sticks, or sudden meteor showers.</p>
+      </div>
+      <div class="mode-card glass-card">
+        <div class="mode-icon">🌋</div>
+        <h4>Void Rising</h4>
+        <p>The void rises by 1 block every 20 seconds. Stockpile wool, build sky towers, and fight before your bed drowns.</p>
+      </div>
+      <div class="mode-card glass-card">
+        <div class="mode-icon">🌙</div>
+        <h4>Lunar Low-Gravity</h4>
+        <p>0.35x moon gravity with floaty jumps, double-jump thrusters, and soaring aerial knockback battles.</p>
+      </div>
+      <div class="mode-card glass-card">
+        <div class="mode-icon">🎲</div>
+        <h4>Chaos Events</h4>
+        <p>Random global events every 45s: 75% Flash Sales, falling Meteor Showers, Trampoline pads, and base swaps.</p>
+      </div>
+      <div class="mode-card glass-card">
+        <div class="mode-icon">🪝</div>
+        <h4>Acrobat Grappling</h4>
+        <p>Equipped with a reusable grappling hook to swing underneath sky islands and launch surprise bed infiltrations.</p>
+      </div>
+      <div class="mode-card glass-card">
+        <div class="mode-icon">🧱</div>
+        <h4>Mega-Bridge Infinite</h4>
+        <p>Unlimited blocks with auto-bridge assistance across massive sky gaps for colossal multi-island highways.</p>
+      </div>
+      <div class="mode-card glass-card">
+        <div class="mode-icon">🎯</div>
+        <h4>One-Shot Glass Cannon</h4>
+        <p>1 HP stakes. High-tension stealth bridging, bow snipes, and instant lethal knockback.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 4: 3D Voxel Studio Map Maker -->
+  <section id="studio" class="section-container">
+    <div class="studio-promo-card glass-card glow-cyan">
+      <div class="studio-promo-content">
+        <div class="section-tag">BUILT-IN CREATOR SUITE</div>
+        <h2>Bedwars Studio (3D Voxel Map Maker)</h2>
+        <p>
+          Design custom sky archipelagos right inside the game. Use 1x1, 3x3, and 5x5 voxel brushes, box fills, and interactive entity placers for Team Beds, Spawners, and Shop NPCs.
+        </p>
+        <ul class="studio-features-list">
+          <li>✔ Free-flight fly-cam with adjustable movement speeds</li>
+          <li>✔ Click-to-place Team Beds, Diamonds, Emeralds, and Forge generators</li>
+          <li>✔ 1-Click "Test Play Map" button to battle AI bots immediately on your creation</li>
+          <li>✔ Export and import maps as clean, portable <code>.json</code> bundles</li>
+        </ul>
+        <a href="#play" class="btn btn-primary">Launch Studio in Web Client</a>
+      </div>
+      <div class="studio-promo-visual">
+        <img src="assets/logo.png" alt="CubeBedwars Logo" class="studio-showcase-img">
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-brand">
+        <img src="assets/logo.png" alt="CubeBedwars Logo" class="brand-logo-sm">
+        <span class="brand-name">CUBE<span class="gradient-text">BEDWARS</span></span>
+        <p>Open-source multi-platform voxel Bedwars ecosystem.</p>
+      </div>
+
+      <div class="footer-links-group">
+        <h4>Official Repositories</h4>
+        <a href="https://github.com/CubeBedwars/cubebedwars.github.io" target="_blank">cubebedwars.github.io (Frontpage Portal)</a>
+        <a href="https://github.com/CubeBedwars/web" target="_blank">web (WebRTC Voxel Client)</a>
+        <a href="https://github.com/CubeBedwars/desktop" target="_blank">desktop (Native Electron App)</a>
+        <a href="https://github.com/CubeBedwars/mobile" target="_blank">mobile (Capacitor Android/iOS App)</a>
+      </div>
+
+      <div class="footer-links-group">
+        <h4>Organization</h4>
+        <a href="https://github.com/CubeBedwars" target="_blank">CubeBedwars on GitHub</a>
+        <a href="https://github.com/CubeBedwars/web/blob/main/LICENSE" target="_blank">MIT License</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 CubeBedwars Organization. Open source on GitHub.</span>
+    </div>
+  </footer>
+
+  <script>
+    // Fullscreen toggle for embedded web player
+    const fsBtn = document.getElementById('btn-fullscreen-toggle');
+    const iframe = document.getElementById('game-iframe');
+
+    fsBtn.addEventListener('click', () => {
+      if (!document.fullscreenElement) {
+        if (iframe.requestFullscreen) iframe.requestFullscreen();
+        else if (iframe.webkitRequestFullscreen) iframe.webkitRequestFullscreen();
+      } else {
+        if (document.exitFullscreen) document.exitFullscreen();
+      }
+    });
+
+    // PWA Install Prompt
+    let deferredPrompt;
+    window.addEventListener('beforeinstallprompt', (e) => {
+      e.preventDefault();
+      deferredPrompt = e;
+      const pwaBtn = document.getElementById('btn-pwa-install');
+      if (pwaBtn) pwaBtn.style.display = 'block';
+    });
+
+    document.getElementById('btn-pwa-install')?.addEventListener('click', async () => {
+      if (deferredPrompt) {
+        deferredPrompt.prompt();
+        const { outcome } = await deferredPrompt.userChoice;
+        deferredPrompt = null;
+      } else {
+        alert('To install CubeBedwars on mobile:\n1. Tap your browser menu (⋮ or Share)\n2. Select "Add to Home Screen"');
+      }
+    });
+  </script>
+</body>
+</html>
